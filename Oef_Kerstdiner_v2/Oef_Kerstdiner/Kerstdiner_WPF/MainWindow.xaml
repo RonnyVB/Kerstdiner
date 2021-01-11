@@ -1,0 +1,44 @@
+﻿<Window x:Class="Kerstdiner_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kerstdiner_WPF"
+        mc:Ignorable="d"
+        Title="Van Beek Ronny" Height="450" Width="1200"  SizeToContent="Height" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Row="0" Grid.Column="0" Margin="5" Header="Type" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="rbDiner" Content="Diner" Margin="5" Checked="rbDiner_Checked" />
+                <RadioButton x:Name="rbKerstdiner" Content="Kerstdiner" Margin="5" Checked="rbKerstdiner_Checked" />
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="btnToonReservaties" Content="Toon reservaties"  Grid.Row="0" Grid.Column="2" Margin="5" Click="btnToonReservaties_Click"/>
+        
+        <Label Content="Naam" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="txtNaam" Grid.Row="1" Grid.Column="1" Margin="5"/>
+        <Label Content="Aantal" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="txtAantal" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <Label Content="Hoofdgerecht" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <ComboBox x:Name="cmbHoofdgerechten" Grid.Row="3" Grid.Column="1" Margin="5"/>
+        <Label x:Name="lblNagerecht" Content="Nagerecht" Grid.Row="4" Grid.Column="0" Margin="5"/>
+        <ComboBox x:Name="cmbNagerechten" Grid.Row="4" Grid.Column="1" Margin="5"/>
+        <Button x:Name="btnBoeken" Content="Boeken"  Grid.Row="5" Grid.Column="0" Margin="5" Click="btnBoeken_Click"/>
+        <Button x:Name="btnSluiten" Content="Sluiten"  Grid.Row="5" Grid.Column="1" Margin="5" Click="btnSluiten_Click"/>
+        <Label x:Name="lblReservaties" Grid.Row="1" Grid.Column="2" Grid.RowSpan="5" FontFamily="Courier New"/>
+    </Grid>
+</Window>
